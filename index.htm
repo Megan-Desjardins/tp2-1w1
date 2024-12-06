@@ -1,103 +1,332 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab #9</title>
+    <title>TP2 - 1W1</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  </head>
 
-<!-- ENTÊTE -->
+  <body>
 
-  <!-- Navigation -->
-   <!-- La navigation est à l'extérieur de entête, car sticky utilise le parent
-   pour se positionner et si on le met dans entête, il ne va pas sur toute la 
-   page (il reste juste dans entête puis disparaît) et position absolute ou fixed
-   ne fonctionnaient pas bien pour cet exercice. :) -->
+    <!-- ENTÊTE -->
 
-  <div class="hero__navigation">
-    <label for="chk-bouton" id="bouton">
-      <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="32" height="32">
-    </label>
-    <input type="checkbox" name="" id="chk-bouton">
-    <nav class="entete__navigation">
-      <a href="#Accueil">Accueil</a>
-      <a href="#Section-1">Section-1</a>
-      <a href="#Section-2">Section-2</a>
-      <a href="#Section-3">Section-3</a>
-      <a href="#Section-4">Section-4</a>
-    </nav>
-  </div> 
+    <!-- Navigation -->
+    <!-- La navigation est à l'extérieur de entête, car sticky utilise le parent
+    pour se positionner et si on le met dans entête, il ne va pas sur toute la 
+    page (il reste juste dans entête puis disparaît) et position absolute ou fixed
+    ne fonctionnaient pas bien. :) -->
 
-  <header id="Accueil" class="entete">
-    <div class="global hero">
+    <div class="hero__navigation">
+      <label for="chk-bouton" id="bouton">
+        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=fff" width="32" height="32">
+      </label>
 
-    <!-- Titre et textes -->
+      <input type="checkbox" name="" id="chk-bouton">
+        <nav class="entete__navigation">
+          <a href="#Accueil">Accueil</a>
+          <a href="#Section-1">Inscription</a>
+          <a href="#Section-2">Races</a>
+          <a href="#Section-3">Articles</a>
+          <a href="#Section-4">Images</a>
+          <a href="#Section-5">Vidéos</a>
+          <a href="#pied">Contact</a>
+        </nav>
+    </div> 
+
+    <header id="Accueil" class="entete">
+      <div class="global hero">
+
+      <!-- Titre et textes -->
       <div class="hero__textes-logo">
         <div class="hero__textes">
           <h1 class="hero__1">Les CHATS</h1>
 
-          <p class="hero__p">Ce travail individuel consiste à créer un site Web monopage composé de 
-                plusieurs sections distinctes, chacune occupant une auteur minimale de 
-                100vh. Chaque section doit être navigable à partir d'un menu fixe toujours
-                visible en haut de la page.</p>
+          <p class="hero__p">Bienvenue sur ma page Web ! Ici, vous pouvez vous détendre
+          en regardant des images de chats et en apprenant plus sur eux. Ce site Web a été
+          fait dans le cadre du cours 1W1 (Mise en page Web) du programme d'intégration de 
+          multimédia de Maisonneuve avec le professeur Eddy Martin.
+          </p>
 
           <h4 class="hero__h4">Auteur : Megan Desjardins</h4>
-          <h4 class="hero__h4">Date de remise : 10 décembre</h4>
+          <h4 class="hero__h4">Adresse de ma page github : <a href="https://github.com/Megan-Desjardins/tp2-1w1.git">https://github.com/Megan-Desjardins/tp2-1w1.git</a></h4>
         </div>
 
       <!-- Logo -->
+        <div>
         <figure class="hero__logo">
           <img src="img/logo.png" alt="logo tp2">
         </figure>
+        </div>
+
+      <!-- Pied de page -->
+        <footer class="hero__footer">
+          <h4 class="hero__h4-2">Département de techniques d'intrégation multimédia - Collège de Maisonneuve - 3800 Sherbrooke Est, Montréal</h4>
+        </footer>
+
       </div>
-        <!-- Pied de page -->
-      <footer class="hero__footer">
-                  <h4 class="hero__h4-2">Département de techniques d'intrégation multimédia - Collège de Maisonneuve - 3800 Sherbrooke Est, Montréal</h4>
-       
-      </footer>
-     </header>
+    </header>
 
-     <!-- SECTION 1 -->
-      <section id="Section-1" class="section-1">
-        <div class="global">
-            <h2>Section-1</h2>
+    <!-- SECTION 1 -->
+
+    <section id="Section-1" class="section-1">
+      <div class="global">
+        <div class="hero__inscription">
+          <h2 class="hero__h2">Inscription</h2>
+
+          <!-- Incsription -->
+          <!-- Nom -->
+          <form action="" method="get" class="form-example">
+            <div class="form-example">
+              <label for="name">Entrez votre nom : </label>
+              <input type="text" name="name" id="name" required />
+            </div>
+
+          <!-- Email -->
+            <div class="form-example">
+              <label for="email">Entrez votre email : </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          
+          <!-- Âge -->
+          <div>
+            <label for="age">Entrez votre date de naissance : </label>
+            <input type="date" name="age" id="age" required>
+          </div>
+          
+          <!-- Question chats -->
+          <fieldset>
+            <legend>Aimez-vous les chats ?</legend>
+          
+            <div>
+              <input type="radio" id="oui" name="reponse" value="oui"/>
+              <label for="non">Oui</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="non" name="reponse" value="non" />
+              <label for="non">Non</label>
+            </div>
+
+          <!-- Envoyer le formulaire -->
+          <div class="form-example">
+            <input type="submit" value="Envoyer" />
+          </div>
+          </fieldset>
+
+
         </div>
-      </section>
+      </div>
+    </section>
 
-     <!-- SECTION 2 -->
-     <section id="Section-2" class="section-2">
-        <div class="global">
-            <h2>Section-2</h2>
+    <!-- SECTION 2 -->
+    <section id="Section-2" class="section-2">
+      <div class="global">
+        <h2 class="hero__h2">Quelques races de chats</h2>
+
+        <!-- Tableau -->
+        <div>
+          <table>
+            <!-- Entête du tableau -->
+            <tr>
+              <th>Image</th>
+              <th>Race</th>
+              <th>Pelage</th>
+              <th>Couleur yeux</th>
+              <th>Région</th>
+            </tr>
+
+            <!-- Reste du tabelau -->
+            <!-- Tuxedo -->
+            <tr>
+              <td>Image</td>
+              <td>Tuxedo</td>
+              <td>Court/mi-long, bicolore (blanc et noir)</td>
+              <td>Vert et jaune</td>
+              <td>Partout (un des chats les plus populaires)</td>
+            </tr>
+            <!-- Maine coon -->
+            <tr>
+              <td>Image</td>
+              <td>Maine coon</td>
+              <td>Mi-long, toutes couleurs sauf chocolat, lilas et fauve</td>
+              <td>Bleu</td>
+              <td>États-Unis</td>
+            </tr>
+            <!-- Bobtail japonais -->
+              <tr>
+                <td>Image</td>
+                <td>Bobtail japonais</td>
+                <td>Court/mi-long, bicolore ou tricolore</td>
+                <td>Vert et jaune</td>
+                <td>Japon</td>
+              </tr>
+              <!-- Asian -->
+              <tr>
+                <td>Image</td>
+                <td>Asian</td>
+                <td>Court et soyeux, toutes couleurs sauf blanc</td>
+                <td>Vert et jaune</td>
+                <td>Angletterre</td>
+              </tr>
+              <!-- Chatreux -->
+                <tr>
+                  <td>Image</td>
+                  <td>Chatreux</td>
+                  <td>Court et dense, gris</td>
+                  <td>Jaune, cuivre-ambré</td>
+                  <td>France</td>
+                </tr>
+          </table>
         </div>
-      </section>
 
-     <!-- SECTION 3 -->
-     <section id="Section-3" class="section-3">
-        <div class="global">
-            <h2>Section-3</h2>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="Section-3" class="section-3">
+      <div class="global">
+        <h2 class="hero__h2">Articles</h2>
+        <!-- Articles -->
+        <div class="hero__article">
+          <!-- Article 1 - Faits Divers -->
+          <article class="article">
+            
+            <figure>
+              <img src="img/museau.jpeg" alt="museau">
+              <figcaption>Bonne idée de tatoo unique</figcaption>
+            </figure>
+
+            <div>
+              <h3>Fait Divers</h3>
+              <h4>Un museau unique</h4>
+              <p>Le museau de chaque chat et différent, comme une empreinte digitale.
+                Votre chat (si vous en avez un) possède, donc, son empreinte de 
+                museau totalement unique et originale.
+              </p>
+            </div>
+
+          </article>
+
+          <!-- Article 2 - Nouvelles D'ici -->
+          <article class="article">
+
+            <figure>
+              <img src="img/bataille.jpg" alt="bataille">
+              <figcaption>Image d'un témoin anonyme</figcaption>
+            </figure>
+
+          <div>
+            <h3>Nouvelles D'ici</h3>
+            <h4>Batailles entre deux mâles</h4>
+            <p>En effet, ce mardi, deux jeunes chats ont été retrouvés en pleine
+              bagarre féroce. Heureusement, la police intervint à temps, avant le crachat de trop.
+              Témoignage du tuxedo : "Je ne pouvais pas le laisser insulter ma femme et
+              mes enfants ainsi. J'espère que la cour sera en ma faveur...".
+            </p>
+          </div>
+          
+          </article>
+          
+          <!-- Article 3 - Actualités Sociopolitiques -->
+          <article class="article">
+
+            <figure>
+              <img src="img/maman.webp" alt="mère-chat">
+              <figcaption>Pauvre mère...</figcaption>
+            </figure>
+
+            <div>
+              <h3>Actualités Sociopolitiques</h3>
+              <h4>Le retour du patriar-chat ?</h4>
+              <p>Un étude méné par plusieur Universités du pays confirme que beaucoup trop de 
+                chattes sont surchargées. Témoignage d'une jeune mère : "Une porté de six, à alaiter
+                et élever seule ! Le père fuit avec la queue entre les jambes et revient quelques 
+                années plus tard pour réclamer la garde !!"
+              </p>
+            </div>
+
+          </article>
+
+          <!-- Article 4 - Chat de la semaine -->
+          <article class="article">
+
+            <figure>
+              <img src="img/mimine.jpg" alt="">
+              <figcaption>C'est mon chat !</figcaption>
+            </figure>
+
+            <div>
+              <h3>Chat de la semaine</h3>
+              <h4>Mimine est l'heureuse gagnante du chat de la semaine !</h4>
+              <p>Évidemment, la chatte la plus belle, élégante et radieuse de toute ! 
+                Sans aucune difficulté, elle a remportée tous les honeurs cette semaine, et non 
+                sans le mériter.
+              </p>
+            </div>
+
+          </article>
+          
         </div>
-      </section>
+      </div>
+    </section>
 
-     <!-- SECTION 4 -->
-     <section id="Section-4" class="section-4">
-        <div class="global">
-            <h2>Section-4</h2>
+    <!-- SECTION 4 -->
+    <section id="Section-4" class="section-4">
+      <div class="global">
+        <h2 class="hero__h2">Section-4</h2>
+        <!-- Galerie -->
+        <div class="galerie">
+          <figure>
+            <img src="img/bataille.jpg" alt="...">
+            <figcaption>Bataille</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/bataille.jpg" alt="...">
+            <figcaption>Bataille</figcaption>
+          </figure>
+          
+          <figure>
+            <img src="img/bataille.jpg" alt="...">
+            <figcaption>Bataille</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/bataille.jpg" alt="...">
+            <figcaption>Bataille</figcaption>
+          </figure>
+          
         </div>
-      </section>
+    </section>
 
-      <!-- PIED DE PAGE -->
-       <footer id="pied" class="pied-de-page">
-        <div class="global">
-            <h2>Pied-de-page</h2>
-        </div>
-       </footer>
+    <!-- SECTION 5 -->
+     <!-- 3 vidéos -->
+     <section id="Section-5" class="section-5">
+      <div class="global">
+        <h2 class="hero__h2">Vidéos de chats</h2>
+        <iframe width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/GznezyFUwg0?si=czPMLIVZ-CYk3Fgk" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
 
+      </div>
+     </section>
 
-    
-</body>
+    <!-- PIED DE PAGE -->
+    <footer id="pied" class="pied-de-page">
+      <div class="global">
+        
+      </div>
+    </footer>
+      
+  </body>
 </html>
 
 
