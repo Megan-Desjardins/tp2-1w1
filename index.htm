@@ -73,51 +73,54 @@
 
     <section id="Section-1" class="section-1">
       <div class="global">
+        <h2 class="hero__h2">Inscription</h2>
         <div class="hero__inscription">
-          <h2 class="hero__h2">Inscription</h2>
-
-          <!-- Incsription -->
+        <!-- Incsription -->
+          <fieldset>
+            <legend>Inscrivez-vous à notre bulletins de nouvelles !</legend>
           <!-- Nom -->
-          <form action="" method="get" class="form-example">
-            <div class="form-example">
+          <form action="" method="get" class="form">
+            <div class="form">
               <label for="name">Entrez votre nom : </label>
-              <input type="text" name="name" id="name" required />
+              <input type="text" name="name" id="name" required/>
             </div>
 
           <!-- Email -->
-            <div class="form-example">
+            <div class="form">
               <label for="email">Entrez votre email : </label>
-              <input type="email" name="email" id="email" required />
+              <input type="email" name="email" id="email" required/>
             </div>
-          
+            
           <!-- Âge -->
-          <div>
-            <label for="age">Entrez votre date de naissance : </label>
-            <input type="date" name="age" id="age" required>
-          </div>
-          
+            <div class="form">
+              <label for="age">Votre date de naissance : </label>
+              <input type="date" name="age" id="age" required/>
+            </div>
+            
           <!-- Question chats -->
-          <fieldset>
-            <legend>Aimez-vous les chats ?</legend>
-          
-            <div>
-              <input type="radio" id="oui" name="reponse" value="oui"/>
-              <label for="non">Oui</label>
-            </div>
-          
-            <div>
-              <input type="radio" id="non" name="reponse" value="non" />
-              <label for="non">Non</label>
-            </div>
+              <div>
+                <input type="radio" id="oui" name="reponse" value="oui"/>
+                <label for="non">Homme</label>
+              </div>
+            
+              <div>
+                <input type="radio" id="non" name="reponse" value="non" />
+                <label for="non">Femme</label>
+              </div>
 
           <!-- Envoyer le formulaire -->
-          <div class="form-example">
-            <input type="submit" value="Envoyer" />
-          </div>
-          </fieldset>
-
-
+            <div class="form">
+              <input type="submit" value="Envoyer" />
+            </div>
+            </fieldset>
         </div>
+
+        <!-- Image -->
+         <figure>
+          <img src="img/client-satisfait.jpg" alt="client-satisfait" class="inscription__img">
+          <figcaption class="inscription__fig">Un client satisfait !</figcaption>
+         </figure>
+        
       </div>
     </section>
 
@@ -125,61 +128,62 @@
     <section id="Section-2" class="section-2">
       <div class="global">
         <h2 class="hero__h2">Quelques races de chats</h2>
-
-        <!-- Tableau -->
-        <div>
-          <table>
-            <!-- Entête du tableau -->
-            <tr>
-              <th>Image</th>
-              <th>Race</th>
-              <th>Pelage</th>
-              <th>Couleur yeux</th>
-              <th>Région</th>
-            </tr>
-
-            <!-- Reste du tabelau -->
-            <!-- Tuxedo -->
-            <tr>
-              <td>Image</td>
-              <td>Tuxedo</td>
-              <td>Court/mi-long, bicolore (blanc et noir)</td>
-              <td>Vert et jaune</td>
-              <td>Partout (un des chats les plus populaires)</td>
-            </tr>
-            <!-- Maine coon -->
-            <tr>
-              <td>Image</td>
-              <td>Maine coon</td>
-              <td>Mi-long, toutes couleurs sauf chocolat, lilas et fauve</td>
-              <td>Bleu</td>
-              <td>États-Unis</td>
-            </tr>
-            <!-- Bobtail japonais -->
+        <div class="tableau">
+          <!-- Tableau -->
+          <div>
+            <table>
+              <!-- Entête du tableau -->
               <tr>
-                <td>Image</td>
-                <td>Bobtail japonais</td>
-                <td>Court/mi-long, bicolore ou tricolore</td>
-                <td>Vert et jaune</td>
-                <td>Japon</td>
+                <th>Image</th>
+                <th>Race</th>
+                <th>Pelage</th>
+                <th>Couleur yeux</th>
+                <th>Région</th>
               </tr>
-              <!-- Asian -->
+
+              <!-- Reste du tabelau -->
+              <!-- Tuxedo -->
               <tr>
-                <td>Image</td>
-                <td>Asian</td>
-                <td>Court et soyeux, toutes couleurs sauf blanc</td>
+                <td><img src="img/tuxedo.jpg" alt="tuxedo"></td>
+                <td>Tuxedo</td>
+                <td>Court/mi-long, bicolore (blanc et noir)</td>
                 <td>Vert et jaune</td>
-                <td>Angletterre</td>
+                <td>Partout (un des chats les plus populaires)</td>
               </tr>
-              <!-- Chatreux -->
+              <!-- Maine coon -->
+              <tr>
+                <td><img src="img/maine-coon.jpg" alt="maine-coon"></td>
+                <td>Maine coon</td>
+                <td>Mi-long, toutes couleurs sauf chocolat, lilas et fauve</td>
+                <td>Bleu</td>
+                <td>États-Unis</td>
+              </tr>
+              <!-- Bobtail japonais -->
                 <tr>
-                  <td>Image</td>
-                  <td>Chatreux</td>
-                  <td>Court et dense, gris</td>
-                  <td>Jaune, cuivre-ambré</td>
-                  <td>France</td>
+                  <td><img src="img/bobtail-japonais.jpg" alt="bobtail-japonais"></td>
+                  <td>Bobtail japonais</td>
+                  <td>Court/mi-long, bicolore ou tricolore</td>
+                  <td>Vert et jaune</td>
+                  <td>Japon</td>
                 </tr>
-          </table>
+                <!-- Asian -->
+                <tr>
+                  <td><img src="img/asian.jpg" alt="asian"></td>
+                  <td>Asian</td>
+                  <td>Court et soyeux, toutes couleurs sauf blanc</td>
+                  <td>Vert et jaune</td>
+                  <td>Angletterre</td>
+                </tr>
+                <!-- Chatreux -->
+                  <tr>
+                    <td><img src="img/chatreux.jpg" alt="chatreux"></td>
+                    <td>Chatreux</td>
+                    <td>Court et dense, gris</td>
+                    <td>Jaune, cuivre-ambré</td>
+                    <td>France</td>
+                  </tr>
+            </table>
+          </div>
         </div>
 
       </div>
@@ -276,29 +280,53 @@
     <!-- SECTION 4 -->
     <section id="Section-4" class="section-4">
       <div class="global">
-        <h2 class="hero__h2">Section-4</h2>
+        <h2 class="hero__h2">Détendez-vous !</h2>
         <!-- Galerie -->
         <div class="galerie">
           <figure>
-            <img src="img/bataille.jpg" alt="...">
-            <figcaption>Bataille</figcaption>
+            <img src="img/mignon-1.jpg" alt="chat-mignon-1">
+            <figcaption>Des amoureux !</figcaption>
           </figure>
 
           <figure>
-            <img src="img/bataille.jpg" alt="...">
-            <figcaption>Bataille</figcaption>
+            <img src="img/mignon-2.jpg" alt="chat-mignon-1">
+            <figcaption>Élégant ~</figcaption>
           </figure>
           
           <figure>
-            <img src="img/bataille.jpg" alt="...">
-            <figcaption>Bataille</figcaption>
+            <img src="img/mignon-3.jpg" alt="chat-mignon-1">
+            <figcaption>Magnifique</figcaption>
           </figure>
 
           <figure>
-            <img src="img/bataille.jpg" alt="...">
-            <figcaption>Bataille</figcaption>
+            <img src="img/mignon-4.jpg" alt="chat-mignon-1">
+            <figcaption>De minuscules pattes !</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/mignon-5.webp" alt="chat-mignon-1">
+            <figcaption>Frère et soeur</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/mignon-6.jpg" alt="chat-mignon-1">
+            <figcaption>Top mignon</figcaption>
           </figure>
           
+          <figure>
+            <img src="img/mignon-7.jpg" alt="chat-mignon-1">
+            <figcaption>Drôle de chat</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/mignon-8.jpg" alt="chat-mignon-1">
+            <figcaption>Promenade d'automne</figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/mignon-9.jpg" alt="chat-mignon-1">
+            <figcaption>Des amis pour la vie !</figcaption>
+          </figure>
         </div>
     </section>
 
@@ -307,22 +335,76 @@
      <section id="Section-5" class="section-5">
       <div class="global">
         <h2 class="hero__h2">Vidéos de chats</h2>
-        <iframe width="560" 
-        height="315" 
+
+        <iframe width="305" 
+        height="200" 
         src="https://www.youtube.com/embed/GznezyFUwg0?si=czPMLIVZ-CYk3Fgk" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen></iframe>
+        allowfullscreen
+        class="video"></iframe>
+
+        <iframe width="305"
+        height="200" 
+        src="https://www.youtube.com/embed/ynBinxdfra0?si=B4D_J-fGn76VWU3J"
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="video"></iframe>
+
+        <iframe width="305" 
+        height="200" 
+        src="https://www.youtube.com/embed/-ViQnEq311A?si=GfLCmarpzJCUpgRU" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        class="video"></iframe>
 
       </div>
      </section>
 
+    <!-- EXAMEN ---------------------------------------------------->
+     <section class="section-6">
+      
+     </section>
+
     <!-- PIED DE PAGE -->
     <footer id="pied" class="pied-de-page">
-      <div class="global">
-        
+      <div class="global hero__footer">
+        <div class="footer__colonne">
+          <h4>Adresse du Collège de Maisonneuve</h4>
+          <p>3800 R. Sherbrooke E, Montréal, QC H1X 2A2</p>
+        </div>
+
+        <div class="footer__colonne">
+          <h4>Département multimédia</h4>
+          <p>Tu apprendras à concevoir et réaliser des projets numériques
+             et interactifs tels que des jeux vidéos, sites web, 
+             modélisations 3D, animations, vidéos, application de 
+             réalité virtuelle, etc. En particulier, tu apprendras à :
+          </p>
+
+        </div class="footer__colonne">
+          <ul class="liste">
+            <li><a href="#">chat.web</a></li>
+            <li><a href="#">Vétérinaire</a></li>
+            <li><a href="#">Rejetverse.com</a></li>
+          </ul>
+        <div>
+
+        <div class="footer__colonne">
+          <ul class="liste">
+            <li><img src="img/insta.webp" alt="instagram"></li>
+            <li><img src="img/behance.svg" alt="behance"></li>
+            <li><img src="img/pinserest.png" alt="pinterest"></li>
+          </ul>
+        </div>
       </div>
     </footer>
       

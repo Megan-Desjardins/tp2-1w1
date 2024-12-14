@@ -34,6 +34,13 @@ body{
     line-height: 40px; /* Pour augmenter espace entre lignes de textes*/
 }
 
+figcaption{
+    /*Tous les figcaptions*/
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(196, 255, 172, 0.6);
+}
+
 
 
 /*///////////////////////////////////// ENTÊTE ////////////////////////////////////////*/ 
@@ -99,6 +106,8 @@ body{
 .entete__navigation a:hover{
     /*Les liens survolé dans la navigations*/
     transform:scale(1.3);
+    transition: transform .25s;
+    background-color: rgb(83, 170, 20);
 }
 
 .entete__navigation a:active{
@@ -204,28 +213,87 @@ body{
     color: white;
 }
 
-/* Section 1 ////////////////////////*/
+/* Section 1 - Inscription ////////////////////////*/
 .section-1{
+    /**/
     background-color: rgb(59 95 31);
 }
 
-.hero__inscription{
+.inscription__img{
+    /*Image dans l'inscription*/
+    display: flex;
+    justify-content: center;
+    width: 90%;
+}
 
+.inscription__fig{
+    /*Figcaption dans l'inscription*/
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.hero__inscription{
+    /*Inscription*/
+    padding: 40px;
+}
+
+.form{
+    /*Chaque partie de l'inscription*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+fieldset legend{
+    /*La légende en haut de l'inscription*/
+    text-align: center;
+    padding: 10px;
 }
 
 
-/* Section ////////////////////////*/
+/* Section 2 - Tableau ////////////////////////*/
 .section-2{
+    /*Toute la section 2*/
     background-color: hsl(93.75deg 38.2% 43.41%);
     color: hsl(46, 40%, 92%);
 }
 
-/* Section 3 //////////////////////*/
+.tableau{
+    /*Tableau*/
+    padding-top: 20px;
+}
+
+.tableau tr,
+.tableau td{
+    /*Colonnes et rangées du tableau*/
+    text-align: center;
+    padding: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    background-color: rgba(255, 255, 255, 0.123);
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.tableau img{
+    /*Les images du tableau*/
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+/* Section 3 - Articles //////////////////////*/
 .section-3{
     /*Toute la section 3*/
     background-color: hsl(93.88deg 42.65% 60.44%);
     color: hsl(29, 41%, 90%);
 }
+
+
+
 
 .hero__article{
     /*Tous les articles*/
@@ -267,14 +335,9 @@ body{
 }
 
 .article figure:hover{
+    /*Les figures des articles lorsqu'on passe avec la souris dessus*/
     transform: scale(1.1);
     transition: transform .25s;
-}
-
-.article figcaption{
-    font-size: 1rem;
-    font-style: italic;
-    color: rgba(196, 255, 172, 0.6);
 }
 
 .article:nth-of-type(odd) figure{
@@ -289,7 +352,7 @@ body{
 }
 
 
-/* Section 4 //////////////////////*/
+/* Section 4 - Galerie//////////////////////*/
 /* css.tricks.filter -> site avec des filtres */
 .section-4{
     /*Toute la section 4*/
@@ -299,7 +362,7 @@ body{
 .galerie{
     /*Galerie*/
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
 }
@@ -321,13 +384,62 @@ body{
 .galerie img{
     /*Les images de la galerie*/
     width: 200px;
+    max-height: 150px;
 }
 
-/* Section 5 /////////////////////*/
+/* Section 5 - Vidéos /////////////////////*/
 .section-5{
     /*Toute la section 3*/
     background-color: hsl(93.88deg 42.65% 60.44%);
     color: hsl(29, 41%, 90%);
 }
 
+.video{
+    /*Les vidéos*/
+    gap: 60px;
+    transform: scale(.9);
+    transition: transform .25s;
+}
+
+.video:hover{
+    /*Les vidéos lorsque la souris passe dessus*/
+    transform: scale(1);
+}
+
+/* Section 6 - EXAMEN //////////////////*/
+
+
+
 /*///////////////////////////////// PIED-DE-PAGE ///////////////////////////*/
+.pied-de-page{
+    background-color:rgb(11, 11, 11);
+}
+
+.hero__footer{
+    display: flex;
+    gap: 5px;
+    
+    min-height: 20vh;
+}
+
+.liste{
+    list-style-type: none;
+}
+
+.liste a{
+    color: rgba(255, 255, 255, 0.424);
+}
+
+.liste a:hover{
+    background-color: rgba(255, 255, 255, 0.096);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.liste a:visited{
+    color: rgba(0, 128, 0, 0.467);
+}
+
+.hero__footer img{
+    width: 40px;
+}
